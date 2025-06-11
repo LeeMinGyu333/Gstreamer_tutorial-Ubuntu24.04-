@@ -1,1 +1,18 @@
 # Gstreamer_tutorial-Ubuntu24.04-
+sudo apt install gcc
+
+apt-get install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libgstreamer-plugins-bad1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav  gstreamer1.0-tools gstreamer1.0-x gstreamer1.0-alsa gstreamer1.0-gl gstreamer1.0-gtk3 gstreamer1.0-qt5 gstreamer1.0-pulseaudio
+ 
+sudo apt install gstreamer1.0-tools gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
+                 gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly \
+                 gstreamer1.0-libav
+                 
+# start tutorial
+git clone https://gitlab.freedesktop.org/gstreamer/gst-docs
+
+# compile basic-tutorial-1.c
+cd gst-docs/examples/tutorials/
+gcc basic-tutorial-1.c -o basic-tutorial-1 `pkg-config --cflags --libs gstreamer-1.0`
+
+# run
+./basic-tutorial-1
